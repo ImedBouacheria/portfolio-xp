@@ -26,8 +26,8 @@ return (
     src={image}
 // taille des icon
     className="      
-      w-14
-      h-14
+      w-12
+      h-12
       object-contain
       drop-shadow-lg
     "

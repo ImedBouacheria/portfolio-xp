@@ -8,7 +8,7 @@ import folderIcon from "../assets/folderIcon.png"
 import cvIcon from "../assets/cvIcon.png"
 import contactIcon from "../assets/contactIcon.png"
 import projectIcon from "../assets/projectIcon.png"
-
+import LVHlogo from "../assets/lvhlogo.png"
 // Composants
 import DesktopIcon from "./DesktopIcon"
 import Taskbar from "./Taskbar"
@@ -19,7 +19,7 @@ import AboutWindow from "../windows/AboutWindow"
 import ProjectsWindow from "../windows/ProjectsWindow"
 import ContactWindow from "../windows/ContactWindow"
 import ResumeWindow from "../windows/ResumeWindow"
-
+import Stage1erAnne from "../windows/Stage1eranne"
 function Desktop() {
 
 // Fenêtre actuellement ouverte
@@ -88,7 +88,15 @@ return (
       // Ouvre la fenêtre CV
       onClick={() => setActiveWindow("resume")}
     />
+    {/* Stage 1er anne */}
+    <DesktopIcon
+    title="Mon Stage"
+    image={LVHlogo}
+    
+      // Ouvre la fenêtre CV
+      onClick={() => setActiveWindow("stage")}
 
+    />
   </div>
 
   {/* ================= FENETRE ABOUT ================= */}
@@ -167,6 +175,26 @@ return (
     </Modal>
 
   )}
+
+  {/* ================= Stage ================= */}
+
+  {activeWindow === "stage" && (
+
+    <Modal
+      title="Stage 1er anne"
+
+      // Ferme la fenêtre
+      onClose={() => setActiveWindow(null)}
+    >
+
+      {/* Contenu */}
+      <Stage1erAnne />
+
+    </Modal>
+
+  )}
+
+
 
   {/* ================= TASKBAR ================= */}
 
