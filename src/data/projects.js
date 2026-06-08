@@ -49,7 +49,7 @@ const projects = [  //On cree une variable projects  ou on va y crée un tableau
     Year:"2026-2027",
     tech: ["React" , "javascript" , "tailwindcss" ],
     image: "/projects/portfolio_img.png",
-    github: "https://github.com/aib-13/Portfolio"
+    github: "https://github.com/ImedBouacheria/portfolio-xp"
   }
 ]
 
