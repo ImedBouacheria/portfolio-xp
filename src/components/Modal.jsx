@@ -250,8 +250,6 @@ function Modal({ title, children, onClose }) {
             "
           >
 
-            Ready
-
           </div>
 
         </div>
