@@ -3,27 +3,30 @@ function Modal({ title, children, onClose }) {
   return (
 
     // Fond sombre derrière la fenêtre
-    <div
-      className="
-        fixed
-        inset-0
-
-        bg-black/30
-        backdrop-blur-[2px]
-
-        flex
-        items-center
-        justify-center
-
-        z-50
-      "
-    >
-
-      {/* Cadre externe XP */}
       <div
         className="
-          w-[950px]
-          h-[650px]
+          fixed
+          inset-0
+
+          flex
+         absolute
+          top-24
+          left-32
+
+          z-50
+
+          pointer-events-none
+        "
+      >
+          
+
+      {/* Cadre externe XP */}
+      <div       
+           className="
+             w-[750px]
+              h-[500px]
+
+            pointer-events-auto
 
           bg-[#0B5EE9]
 

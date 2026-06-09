@@ -27,7 +27,6 @@ const [activeWindow, setActiveWindow] = useState(null)
 
 return (
 
-
 // Bureau Windows XP
 <div
   className="
@@ -112,6 +111,7 @@ return (
   >
 
 
+
 <AboutWindow />
 
 
@@ -132,6 +132,7 @@ return (
       // Ferme la fenêtre
       onClose={() => setActiveWindow(null)}
     >
+      
 
       {/* Contenu */}
       <ProjectsWindow />
