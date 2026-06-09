@@ -318,11 +318,7 @@ function AboutWindow() {
             </p>
 
             <p>
-               Stage effectué 
-            </p>
-
-            <p>
-               Études : Informatique
+               Études : Une année en BUT + Une année en BTS SIO 
             </p>
 
           </div>

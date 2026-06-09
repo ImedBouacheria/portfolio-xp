@@ -20,6 +20,7 @@ function Competences (){
 
               <li> Travail en Autonomie </li>
 
+
             </ul>
 
           </div>
