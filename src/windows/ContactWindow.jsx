@@ -1,226 +1,130 @@
+import { useState } from "react"
+
 function ContactWindow() {
 
-return (
+  // Adresse email
+  const email = "ayoubbouacheria024@gmail.com"
 
-<div
-  className="
-    w-full
-    h-full
+  // Etat pour savoir si l'email a été copié
+  const [copied, setCopied] = useState(false)
 
-    flex
-    items-center
-    justify-center
-  "
->
+  // Fonction appelée quand on clique sur le bouton
+  function copyEmail() {
 
-  {/* Carte contact */}
-  <div
-    className="
-      w-[500px]
+    // Copie l'email dans le presse papier
+    navigator.clipboard.writeText(email)
 
-      bg-white/80
-      backdrop-blur-md
+    // Change le texte du bouton
+    setCopied(true)
 
-      border
-      border-white/30
+    // Remet le texte normal après 2 secondes
+    setTimeout(() => {
+      setCopied(false)
+    }, 2000)
 
-      rounded-2xl
+  }
 
-      shadow-2xl
+  return (
 
-      p-8
-
-      flex
-      flex-col
-      gap-5
-    "
-  >
-
-    {/* Titre */}
-    <div>
-
-      <h1
-        className="
-          text-4xl
-          font-bold
-          text-black
-        "
-      >
-        Contact
-      </h1>
-
-      <p
-        className="
-          text-gray-600
-          mt-2
-        "
-      >
-        Un projet ou une opportunité ?
-        Envoyez-moi un message.
-      </p>
-
-    </div>
-
-    {/* Formulaire */}
-    <form
-      action="mailto:ayoubbouacheria024@gmail.com"
-      method="POST"
-      encType="text/plain"
-
+    <div
       className="
+        h-full
+
         flex
-        flex-col
-        gap-4
+        items-center
+        justify-center
       "
     >
 
-      {/* Nom */}
-      <input
-        type="text"
-        name="name"
-        placeholder="Votre nom"
-
+      {/* Carte contact */}
+      <div
         className="
           bg-white
 
-          border
-          border-gray-300
+          p-8
 
           rounded-xl
 
-          px-4
-          py-3
+          shadow-lg
 
-          outline-none
-
-          focus:border-blue-500
-          focus:ring-2
-          focus:ring-blue-300
-
-          transition
-        "
-      />
-
-      {/* Email */}
-      <input
-        type="email"
-        name="email"
-        placeholder="Votre email"
-
-        className="
-          bg-white
-
-          border
-          border-gray-300
-
-          rounded-xl
-
-          px-4
-          py-3
-
-          outline-none
-
-          focus:border-blue-500
-          focus:ring-2
-          focus:ring-blue-300
-
-          transition
-        "
-      />
-
-      {/* Sujet */}
-      <input
-        type="text"
-        name="subject"
-        placeholder="Sujet"
-
-        className="
-          bg-white
-
-          border
-          border-gray-300
-
-          rounded-xl
-
-          px-4
-          py-3
-
-          outline-none
-
-          focus:border-blue-500
-          focus:ring-2
-          focus:ring-blue-300
-
-          transition
-        "
-      />
-
-      {/* Message */}
-      <textarea
-        name="message"
-        placeholder="Votre message"
-
-        rows="5"
-
-        className="
-          bg-white
-
-          border
-          border-gray-300
-
-          rounded-xl
-
-          px-4
-          py-3
-
-          resize-none
-
-          outline-none
-
-          focus:border-blue-500
-          focus:ring-2
-          focus:ring-blue-300
-
-          transition
-        "
-      />
-
-      {/* Bouton */}
-      <button
-        type="submit"
-
-        className="
-          mt-2
-
-          bg-gradient-to-r
-          from-blue-600
-          to-blue-500
-
-          hover:scale-[1.02]
-          hover:shadow-xl
-
-          text-white
-          font-semibold
-
-          py-3
-
-          rounded-xl
-
-          transition-all
-          duration-200
+          w-[500px]
         "
       >
-        Envoyer le message
-      </button>
 
-    </form>
+        {/* Titre */}
+        <h1
+          className="
+            text-3xl
+            font-bold
 
-  </div>
+            mb-4
+          "
+        >
+          Contact
+        </h1>
 
-</div>
+        {/* Description */}
+        <p
+          className="
+            text-gray-600
 
+            mb-6
+          "
+        >
+          Vous pouvez me contacter par email.
+        </p>
 
-)
+        {/* Email */}
+        <div
+          className="
+            border
+
+            rounded-lg
+
+            p-4
+
+            mb-6
+          "
+        >
+
+          <p className="text-sm text-gray-500">
+            Adresse email
+          </p>
+
+          <p className="font-semibold">
+            {email}
+          </p>
+
+        </div>
+
+        {/* Bouton copier */}
+        <button
+          onClick={copyEmail}
+
+          className="
+            w-full
+
+            bg-blue-600
+
+            text-white
+
+            py-3
+
+            rounded-lg
+
+            hover:bg-blue-700
+          "
+        >
+          {copied
+            ? "Email copié !"
+            : "Copier l'email"}
+        </button>
+
+      </div>
+
+    </div>
+
+  )
 }
 
 export default ContactWindow

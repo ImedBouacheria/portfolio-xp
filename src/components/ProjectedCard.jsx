@@ -1,9 +1,5 @@
 function ProjectCard({
-title,
-description,
-tech,
-image,
-github
+title,description,tech,image,github
 }) {
 
 return (
