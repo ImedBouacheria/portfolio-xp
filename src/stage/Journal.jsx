@@ -32,6 +32,7 @@ function Journal() {
                   interesser etais le front-end , sachant que l'entreprise forme 
                   ses employer j'ai pas eut de mal a trouver un exercice a faire sur place 
                 </p>
+                
              <br />
                 <p className="font-bold">
                   Projet No 1 : 

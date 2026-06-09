@@ -164,11 +164,11 @@ function AboutWindow() {
 
               <p className="font-semibold mb-1 flex justify-between">
                 <span>React</span>
-                <span>90%</span>
+                <span>70%</span>
               </p>
 
               <div className="w-full h-3 bg-gray-200 rounded-full">
-                <div className="w-[90%] h-3 bg-blue-500 rounded-full" />
+                <div className="w-[70%] h-3 bg-blue-500 rounded-full" />
               </div>
 
             </div>
