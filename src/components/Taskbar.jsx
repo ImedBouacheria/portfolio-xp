@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import LogoWindows from "../assets/logowindows.png"
-
+import LVHlogo from "../assets/lvhlogo.png"
 import folderIcon from "../assets/folderIcon.png"
 import cvIcon from "../assets/cvIcon.png"
 import contactIcon from "../assets/contactIcon.png"
@@ -17,31 +17,36 @@ const [startOpen, setStartOpen] = useState(false)
 
 // Applications du menu démarrer
 const apps = [
-{
-title: "About",
-icon: folderIcon,
-window: "about"
-},
 
+  {
+    title: "About",
+    icon: folderIcon,
+    window: "about"
+  },
 
-{
-  title: "Projects",
-  icon: projectIcon,
-  window: "projects"
-},
+  {
+    title: "Projects",
+    icon: projectIcon,
+    window: "projects"
+  },
 
-{
-  title: "Contact",
-  icon: contactIcon,
-  window: "contact"
-},
+  {
+    title: "Contact",
+    icon: contactIcon,
+    window: "contact"
+  },
 
-{
-  title: "Mon CV",
-  icon: cvIcon,
-  window: "resume"
-}
+  {
+    title: "Mon CV",
+    icon: cvIcon,
+    window: "resume"
+  },
 
+  {
+    title: "Mon Stage",
+    icon: LVHlogo,
+    window: "Stage"
+  }
 
 ]
 
