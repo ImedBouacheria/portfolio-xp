@@ -11,7 +11,7 @@ return (
     rel="noopener noreferrer"
     className="bg-green-600 text-white px-4 py-2 rounded"
   >
-    👁️ Voir le PDF
+     Voir le PDF
   </a>
 
   <a
@@ -19,7 +19,7 @@ return (
     download
     className="bg-blue-600 text-white px-4 py-2 rounded"
   >
-    📥 Télécharger
+     Télécharger
   </a>
 
 </div>
