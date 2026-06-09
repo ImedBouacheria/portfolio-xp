@@ -133,7 +133,33 @@ return (
       démarrer
 
     </button>
+    {/* Fenêtre ouverte */}
 
+    {activeWindow && (
+
+      <button
+        className="
+          bg-blue-400
+
+          text-white
+
+          px-4
+          py-1
+
+          rounded
+
+          border
+          border-blue-200
+
+          shadow
+
+          capitalize
+        "
+      >
+        {activeWindow}
+      </button>
+
+    )}
     {/* Menu démarrer */}
     {startOpen && (
 
