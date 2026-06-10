@@ -15,6 +15,7 @@ setActiveWindow
 // Etat menu démarrer
 const [startOpen, setStartOpen] = useState(false)
 
+
 // Applications du menu démarrer
 const apps = [
 
@@ -45,7 +46,7 @@ const apps = [
   {
     title: "Mon Stage",
     icon: LVHlogo,
-    window: "Stage"
+    window: "stage"
   }
 
 ]
@@ -133,6 +134,37 @@ return (
       démarrer
 
     </button>
+
+    {activeWindow && (
+
+  <button
+
+    onClick={() => {
+
+      setActiveWindow(activeWindow)
+
+    }}
+
+    className="
+      bg-blue-400
+
+      text-white
+
+      px-4
+      py-1
+
+      rounded
+
+      border
+      border-blue-200
+
+      shadow
+    "
+  >
+    {activeWindow}
+  </button>
+
+)}
     {/* Fenêtre ouverte */}
 
     {activeWindow && (
@@ -209,6 +241,8 @@ return (
               onClick={() => {
                 setActiveWindow(app.window)
                 setStartOpen(false)
+                {/* ABOUT */}
+
               }}
 
               className="

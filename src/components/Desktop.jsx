@@ -199,7 +199,10 @@ return (
 
   {/* ================= TASKBAR ================= */}
 
-  <Taskbar activeWindow={activeWindow} />
+ <Taskbar
+  activeWindow={activeWindow}
+  setActiveWindow={setActiveWindow}
+/>
 
 </div>
 
